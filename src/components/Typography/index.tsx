@@ -1,7 +1,8 @@
 import { cva } from "class-variance-authority";
-import { FC, ReactNode, createElement } from "react";
+import { FC, HTMLAttributes, ReactNode, createElement } from "react";
 
-type TypographyProps = {
+interface TypographyProps
+  extends HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement> {
   /**
    * The variant to use
    * @type "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "large" | "p" | "small" | "caption"
@@ -37,7 +38,7 @@ type TypographyProps = {
    * <Typography>Hello</Typography>
    */
   children: ReactNode;
-};
+}
 
 /**
  * A React component for rendering typographic elements with customizable styles.
