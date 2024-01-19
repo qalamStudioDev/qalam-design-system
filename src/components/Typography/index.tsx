@@ -3,13 +3,23 @@ import { FC, ReactNode, createElement } from "react";
 
 type TypographyProps = {
   /**
-   * The tag to use
-   * @type "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "caption"
+   * The variant to use
+   * @type "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "large" | "p" | "small" | "caption"
    * @default "p"
    * @example
-   * <Typography tag="h1">Typography</Typography>
+   * <Typography variant="h1">Typography</Typography>
    */
-  tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "caption";
+  variant?:
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "large"
+    | "p"
+    | "small"
+    | "caption";
 
   /**
    * Optional className to apply
@@ -35,32 +45,34 @@ type TypographyProps = {
  * @returns The rendered Typography component.
  */
 const Typography: FC<TypographyProps> = ({
-  tag = "p",
+  variant = "p",
   className,
   children,
 }) => {
   const typographyVariants = cva([className], {
     variants: {
-      tag: {
+      variant: {
         h1: "text-5xl tracking-tight",
         h2: "text-4xl",
         h3: "text-3xl",
         h4: "text-2xl",
         h5: "text-xl",
         h6: "text-lg",
+        large: "text-lg",
         p: "text-base",
+        small: "text-sm",
         caption: "text-sm",
       },
     },
     defaultVariants: {
-      tag: "p",
+      variant: "p",
     },
   });
 
   return createElement(
-    tag,
+    variant === "large" || variant === "small" ? "p" : variant,
     {
-      className: typographyVariants({ tag }),
+      className: typographyVariants({ variant }),
     },
     children,
   );
