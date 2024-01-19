@@ -24,7 +24,8 @@
   },
   "include": [
     "src",
-    ".storybook/**/*"
+    ".storybook/**/*",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",

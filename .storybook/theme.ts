@@ -3,15 +3,15 @@ import { create } from "@storybook/theming";
 export default create({
   base: "light",
   // Typography
-  fontBase: '"Open Sans", sans-serif',
-  fontCode: "monospace",
+  fontBase: '"Montserrat", sans-serif',
+  fontCode: "sans-serif",
 
   brandTitle: "Qalam Design System",
   brandUrl: "https://qalam.com",
   brandTarget: "_self",
 
   //
-  colorPrimary: "#3A10E5",
+  colorPrimary: "#b75566",
   colorSecondary: "#585C6D",
 
   // UI
@@ -19,10 +19,10 @@ export default create({
   appContentBg: "#ffffff",
   appPreviewBg: "#ffffff",
   appBorderColor: "#585C6D",
-  appBorderRadius: 32,
+  appBorderRadius: 4,
 
   // Text colors
-  textColor: "#10162F",
+  textColor: "#000000",
   textInverseColor: "#ffffff",
 
   // Toolbar default and active colors
@@ -32,7 +32,7 @@ export default create({
 
   // Form colors
   inputBg: "#ffffff",
-  inputBorder: "#10162F",
-  inputTextColor: "#10162F",
-  inputBorderRadius: 2,
+  inputBorder: "#000000",
+  inputTextColor: "#000000",
+  inputBorderRadius: 8,
 });
