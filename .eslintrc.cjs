@@ -8,7 +8,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:storybook/recommended",
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs", "prettier.config.cjs", "postcss.config.cjs"],
+  ignorePatterns: ["dist", ".eslintrc.cjs", "prettier.config.cjs", "postcss.config.cjs", "!.storybook"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
