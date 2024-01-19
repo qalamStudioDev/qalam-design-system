@@ -17,6 +17,7 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:tailwindcss/recommended",
     "prettier",
   ],
   plugins: [
@@ -58,6 +59,9 @@ module.exports = {
     "import/resolver": {
       node: true,
       typescript: true,
+    },
+    tailwindcss: {
+      callees: ["clsx", "cva", "cx"],
     },
   },
   parser: "@typescript-eslint/parser",
