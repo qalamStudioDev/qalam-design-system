@@ -73,8 +73,24 @@ export const H6: Story = {
   },
 };
 
+export const LargeParagraph: Story = {
+  args: {
+    variant: "large",
+    children:
+      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+  },
+};
+
 export const Paragraph: Story = {
   args: {
+    children:
+      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+  },
+};
+
+export const SmallParagraph: Story = {
+  args: {
+    variant: "small",
     children:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
   },
