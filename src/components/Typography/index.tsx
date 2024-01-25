@@ -27,12 +27,12 @@ interface TypographyProps
    * @optional
    * @type string
    * @example
-   * <Typography className="text-red-500">Typography</Typography>
+   * <Typography className="!text-red-500">Hello</Typography> // Add "!" to override color
    */
   className?: string;
 
   /**
-   * The children to render
+   * The children to render, use "!" to override font size or color
    * @type ReactNode
    * @example
    * <Typography>Hello</Typography>

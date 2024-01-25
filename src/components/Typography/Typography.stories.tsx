@@ -109,7 +109,7 @@ export const Caption: Story = {
 
 export const Custom: Story = {
   args: {
-    className: "text-red-500",
+    className: "!text-red-500 !text-4xl",
     children: (
       <>
         <em>Hello</em> <b>World</b>
