@@ -1,6 +1,6 @@
 {
   "name": "qalam-design-system",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_e289261e6532a09"
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
