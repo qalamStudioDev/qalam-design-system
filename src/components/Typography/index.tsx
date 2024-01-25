@@ -23,7 +23,7 @@ interface TypographyProps
     | "caption";
 
   /**
-   * Optional className to apply
+   * Optional className to apply, use "!" to override font size or color
    * @optional
    * @type string
    * @example
@@ -32,7 +32,7 @@ interface TypographyProps
   className?: string;
 
   /**
-   * The children to render, use "!" to override font size or color
+   * The children to render
    * @type ReactNode
    * @example
    * <Typography>Hello</Typography>
