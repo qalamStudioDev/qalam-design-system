@@ -4,7 +4,7 @@ import Button from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Example/Button",
+  title: "Atoms/Button",
   component: Button,
   parameters: {
     design: {
@@ -22,24 +22,26 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    label: "Button",
+    children: "Button",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Button",
+    variant: "text",
+    children: "Button",
   },
 };
 
 export const Large: Story = {
   args: {
-    label: "Button",
+    variant: "bordered",
+    children: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
-    label: "Button",
+    children: "Button",
   },
 };
