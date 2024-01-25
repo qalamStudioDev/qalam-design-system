@@ -8,13 +8,18 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 /**
  * Primary UI component for user interaction
  */
-const Button: FC<ButtonProps> = ({ variant, children, ...props }) => {
-  const buttonVariants = cva(["px-4 py-2"], {
+const Button: FC<ButtonProps> = ({
+  variant,
+  children,
+  className,
+  ...props
+}) => {
+  const buttonVariants = cva(["px-4 py-2", className], {
     variants: {
       variant: {
-        solid: "bg-blue-500 text-white",
-        bordered: "border border-blue-500 text-blue-500",
-        text: "text-blue-500",
+        solid: "bg-primary text-white",
+        bordered: "border border-primary text-primary",
+        text: "text-primary",
       },
     },
     defaultVariants: {
