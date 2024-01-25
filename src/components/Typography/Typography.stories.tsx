@@ -32,6 +32,9 @@ const meta = {
 export default meta;
 
 export const H1: Story = {
+  parameters: {
+    url: "https://www.figma.com/file/D78idXbjuoE69TJqk7wVMB/Project-Circles?type=design&node-id=590-32&mode=design&t=rbiIHDGyNz6ZKrQw-0",
+  },
   args: {
     variant: "h1",
     children: "Heading 1",

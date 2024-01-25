@@ -53,11 +53,11 @@ const Typography: FC<TypographyProps> = ({
   const typographyVariants = cva([className], {
     variants: {
       variant: {
-        h1: "text-5xl tracking-tight",
+        h1: "text-4xl font-bold md:text-5xl ",
         h2: "text-4xl",
-        h3: "text-3xl",
-        h4: "text-2xl",
-        h5: "text-xl",
+        h3: "text-2xl md:text-3xl",
+        h4: "text-xl md:text-2xl",
+        h5: "text-lg md:text-xl",
         h6: "text-lg",
         large: "text-lg",
         p: "text-base",
