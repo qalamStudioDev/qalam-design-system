@@ -50,7 +50,7 @@ const Typography: FC<TypographyProps> = ({
   className,
   children,
 }) => {
-  const typographyVariants = cva([className], {
+  const typographyVariants = cva(["text-text", className], {
     variants: {
       variant: {
         h1: "text-4xl font-bold md:text-5xl ",
