@@ -1,12 +1,18 @@
-import { AnchorHTMLAttributes, FC, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 
-export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export type AnchorProps<C extends ElementType> = {
   children: ReactNode;
-  render?: ({ ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) => ReactNode;
-}
+  className?: string;
+  as?: C;
+} & ComponentPropsWithoutRef<C>;
 
-const Anchor: FC<AnchorProps> = ({ render, children, ...props }) => {
-  return render ? render({ children, ...props }) : <a {...props}>{children}</a>;
+const Anchor = <C extends ElementType>({
+  as,
+  children,
+  ...props
+}: AnchorProps<C>) => {
+  const Component = as || "a";
+  return <Component {...props}>{children}</Component>;
 };
 
 export default Anchor;

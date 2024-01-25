@@ -26,13 +26,10 @@ export const Default: Story = {
 
 export const CustomRenderComponent: Story = {
   args: {
+    as: "a",
+    className: "text-blue-500",
     children: "This is a link with a custom component",
     href: "https://www.github.com/theRhasoldy",
     target: "_blank",
-    render: ({ children, href, ...props }) => (
-      <a href={`${href}/test`} {...props} className="text-red-600">
-        {children}
-      </a>
-    ),
   },
 };
