@@ -26,6 +26,11 @@ const meta = {
         ],
       },
     },
+    children: {
+      control: {
+        type: "text",
+      },
+    },
   },
 } satisfies Meta<typeof Typography>;
 
