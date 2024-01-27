@@ -8,7 +8,14 @@ const meta = {
   title: "Atoms/Anchor",
   component: Anchor,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    variant: {
+      control: {
+        type: "select",
+        options: ["underlined", "alwaysUnderlined", "button"],
+      },
+    },
+  },
 } satisfies Meta<typeof Anchor>;
 
 export default meta;
@@ -24,12 +31,37 @@ export const Default: Story = {
   },
 };
 
-export const CustomRenderComponent: Story = {
+export const AlwaysUnderlined: Story = {
   args: {
-    as: "a",
-    className: "text-blue-500",
     children: "This is a link with a custom component",
     href: "https://www.github.com/theRhasoldy",
     target: "_blank",
+    variant: "alwaysUnderlined",
+  },
+};
+
+export const Underlined: Story = {
+  args: {
+    children: "This is a link with a custom component",
+    href: "https://www.github.com/theRhasoldy",
+    target: "_blank",
+    variant: "underlined",
+  },
+};
+
+export const Button: Story = {
+  args: {
+    children: "This is a link",
+    href: "https://www.github.com/theRhasoldy",
+    target: "_blank",
+    variant: "button",
+  },
+};
+
+export const CustomComponent: Story = {
+  args: {
+    as: () => <a href="https://www.github.com/theRhasoldy/test">Hello</a>,
+    className: "text-blue-500",
+    children: "This is a link with a custom component",
   },
 };
