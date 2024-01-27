@@ -17,9 +17,10 @@ const Button: FC<ButtonProps> = ({
   const buttonVariants = cva(["px-4 py-2", className], {
     variants: {
       variant: {
-        solid: "bg-primary text-white",
-        bordered: "border border-primary text-primary",
-        text: "text-primary",
+        solid: "bg-primary-default text-white",
+        bordered:
+          "border border-primary-default text-primary-default hover:bg-primary-light",
+        text: "text-primary-default",
       },
     },
     defaultVariants: {
