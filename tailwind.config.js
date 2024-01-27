@@ -4,9 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#b75566",
-        secondary: "#7d6a8e",
+        primary: {
+          light: "#b75580",
+          default: "#b75566",
+          dark: "#b75566",
+        },
+        secondary: {
+          light: "#7d6a8e",
+          default: "#7d6a8e",
+          dark: "#7d6a8e",
+        },
         text: "#000000",
+      },
+      transitionDuration: {
+        default: "500ms",
       },
     },
   },
