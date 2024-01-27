@@ -19,6 +19,9 @@ export default {
       transitionDuration: {
         default: "500ms",
       },
+      borderRadius: {
+        default: "0.75rem",
+      },
     },
   },
   plugins: [],

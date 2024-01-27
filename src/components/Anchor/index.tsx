@@ -16,11 +16,11 @@ const Anchor = <C extends ElementType>({
   ...props
 }: AnchorProps<C>) => {
   const Component = as || "a";
-  const anchorVariants = cva(["text-text", className], {
+  const anchorVariants = cva(["text-text duration-default", className], {
     variants: {
       variant: {
         button:
-          "bg-primary-default px-4 py-2 text-white duration-default hover:bg-primary-light",
+          "rounded-default bg-primary-default px-8 py-4 text-white hover:bg-primary-light",
         alwaysUnderlined: "hover:underline",
         underlined: "underline",
         text: "",
