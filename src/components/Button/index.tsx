@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { FC, HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   variant?: "solid" | "bordered" | "text";
@@ -9,12 +9,7 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 /**
  * Primary UI component for user interaction
  */
-const Button: FC<ButtonProps> = ({
-  variant,
-  children,
-  className,
-  ...props
-}) => {
+const Button = ({ variant, children, className, ...props }: ButtonProps) => {
   const buttonVariants = cva(
     ["rounded-default text-primary-500 duration-default", className],
     {

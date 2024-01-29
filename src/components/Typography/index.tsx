@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { FC, HTMLAttributes, ReactNode, createElement } from "react";
+import { HTMLAttributes, ReactNode, createElement } from "react";
 
 export interface TypographyProps
   extends HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement> {
@@ -45,11 +45,11 @@ export interface TypographyProps
  * @param props - The props for the Typography component.
  * @returns The rendered Typography component.
  */
-const Typography: FC<TypographyProps> = ({
+const Typography = ({
   variant = "p",
   className,
   children,
-}) => {
+}: TypographyProps) => {
   const typographyVariants = cva(["text-text", className], {
     variants: {
       variant: {
