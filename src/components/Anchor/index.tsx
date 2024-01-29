@@ -20,7 +20,7 @@ const Anchor = <C extends ElementType>({
     variants: {
       variant: {
         button:
-          "rounded-default bg-primary-default px-8 py-4 text-white hover:bg-primary-light",
+          "rounded-default bg-primary-500 px-8 py-4 text-white hover:bg-primary-400",
         alwaysUnderlined: "hover:underline",
         underlined: "underline",
         text: "",
