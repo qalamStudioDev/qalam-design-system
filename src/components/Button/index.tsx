@@ -1,17 +1,26 @@
 import { cva } from "class-variance-authority";
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithoutRef, ElementType } from "react";
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export type ButtonProps<C extends ElementType> = {
   variant?: "solid" | "bordered" | "text";
   size?: "small" | "default" | "large";
-}
+  as?: C;
+} & ComponentPropsWithoutRef<C>;
 
 /**
  * Primary UI component for user interaction
  */
-const Button = ({ variant, children, className, ...props }: ButtonProps) => {
+const Button = <C extends ElementType>({
+  variant,
+  size,
+  children,
+  className,
+  as,
+  ...props
+}: ButtonProps<C>) => {
+  const Component = as || "button";
   const buttonVariants = cva(
-    ["rounded-default text-primary-500 duration-default", className],
+    ["block rounded-default text-primary-500 duration-default", className],
     {
       variants: {
         variant: {
@@ -22,7 +31,7 @@ const Button = ({ variant, children, className, ...props }: ButtonProps) => {
         },
         size: {
           small: "px-4 py-2",
-          default: "px-8 py-2",
+          default: "px-8 py-3",
           large: "px-12 py-4",
         },
       },
@@ -34,9 +43,9 @@ const Button = ({ variant, children, className, ...props }: ButtonProps) => {
   );
 
   return (
-    <button className={buttonVariants({ variant })} {...props}>
+    <Component className={buttonVariants({ variant, size })} {...props}>
       {children}
-    </button>
+    </Component>
   );
 };
 

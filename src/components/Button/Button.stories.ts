@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from ".";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Atoms/Button",
   component: Button,
@@ -11,37 +10,50 @@ const meta = {
       url: "https://www.figma.com/file/D78idXbjuoE69TJqk7wVMB/Project-Circles?type=design&node-id=589-920&mode=design&t=FkJcEGsKp5wouJdT-0",
     },
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     children: "Button",
   },
 };
 
-export const Secondary: Story = {
+export const TextButton: Story = {
   args: {
     variant: "text",
     children: "Button",
   },
 };
 
-export const Large: Story = {
+export const BorderedButton: Story = {
   args: {
     variant: "bordered",
     children: "Button",
   },
 };
 
-export const Small: Story = {
+export const LargeButton: Story = {
   args: {
+    children: "Button",
+    size: "large",
+  },
+};
+
+export const SmallButton: Story = {
+  args: {
+    children: "Button",
+    size: "small",
+  },
+};
+
+export const ButtonAsLink: Story = {
+  args: {
+    as: "a",
+    href: "https://www.github.com/theRhasoldy",
     children: "Button",
   },
 };
