@@ -61,7 +61,7 @@ module.exports = {
       typescript: true,
     },
     tailwindcss: {
-      callees: ["clsx", "cva", "cx"],
+      callees: ["cva", "cx", "className", "variants", "variant"],
     },
   },
   parser: "@typescript-eslint/parser",
