@@ -12,7 +12,7 @@ const meta = {
     variant: {
       control: {
         type: "select",
-        options: ["underlined", "alwaysUnderlined", "button"],
+        options: ["underlined", "alwaysUnderlined", "text"],
       },
     },
   },
@@ -49,19 +49,16 @@ export const Underlined: Story = {
   },
 };
 
-export const Button: Story = {
-  args: {
-    children: "This is a link",
-    href: "https://www.github.com/theRhasoldy",
-    target: "_blank",
-    variant: "button",
-  },
-};
-
 export const CustomComponent: Story = {
   args: {
-    as: () => <a href="https://www.github.com/theRhasoldy/test">Hello</a>,
-    className: "text-blue-500",
+    as: () => (
+      <a
+        className="rounded-full bg-primary-500 px-4 py-2 text-white"
+        href="https://www.github.com/theRhasoldy/test"
+      >
+        Hello
+      </a>
+    ),
     children: "This is a link with a custom component",
   },
 };

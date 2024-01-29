@@ -5,7 +5,7 @@ export type AnchorProps<C extends ElementType> = {
   children: ReactNode;
   className?: string;
   as?: C;
-  variant?: "underlined" | "alwaysUnderlined" | "button";
+  variant?: "text" | "underlined" | "alwaysUnderlined";
 } & ComponentPropsWithoutRef<C>;
 
 const Anchor = <C extends ElementType>({
@@ -19,15 +19,13 @@ const Anchor = <C extends ElementType>({
   const anchorVariants = cva(["text-text duration-default", className], {
     variants: {
       variant: {
-        button:
-          "rounded-default bg-primary-500 px-8 py-4 text-white hover:bg-primary-400",
         alwaysUnderlined: "hover:underline",
         underlined: "underline",
         text: "",
       },
     },
     defaultVariants: {
-      variant: "text",
+      variant: "underlined",
     },
   });
 
