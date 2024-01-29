@@ -50,15 +50,25 @@ export const Underlined: Story = {
 };
 
 export const CustomComponent: Story = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Anchor 
+href="/"
+as={({ children, ...props }) => (<a {...props} className="bg-primary-500">{children}</a>)}>
+  Hello
+</Anchor>`,
+      },
+    },
+  },
   args: {
-    as: () => (
-      <a
-        className="rounded-full bg-primary-500 px-4 py-2 text-white"
-        href="https://www.github.com/theRhasoldy/test"
-      >
-        Hello
+    as: ({ ...props }) => (
+      <a {...props} className="rounded-full bg-primary-500 p-4 text-white">
+        {props.children}
       </a>
     ),
+    href: "/",
     children: "This is a link with a custom component",
   },
 };
